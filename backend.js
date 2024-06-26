@@ -10,26 +10,21 @@ var  res = document.getElementById("tar").value
  ListTar();
  }
 
-function completados(i){
-    TlistaCompletadas.push(i);
+function completados(i) {
+  
+  var do1 = document.querySelector("#Comple")
+  var lol = document.createTextNode(TListaTarea[i]);
+  var newtr1 = document.createElement("tr")
+  var newtd1 = document.createElement("td");
+  var cont1 = document.createTextNode(lol);
+  newtd1.appendChild(lol)
+  newtr1.appendChild(newtd1)
+  do1.appendChild(newtr1)
+
     TListaTarea.splice(i,1);
     ListTar();
-    ListComple();
+    
 }
-
-
-function ListComple(){
-        var do1 = document.querySelector("#Comple")
-        do1.innerHTML=""
-        for (let i = 0; i < TlistaCompletadas.length; i++) {
-           var newtr = document.createElement("tr")
-        var newtd = document.createElement("td");
-        var newContent = document.createTextNode(TlistaCompletadas[i]);
-        newtd.appendChild(newContent)
-        newtr.appendChild(newtd)
-        do1.appendChild(newtr)
-    }
-       }
 
 function ListTar(){
    var don = document.querySelector("#ContTar")
@@ -52,7 +47,10 @@ Botones.appendChild(completado)
 Botones.appendChild(elimiar)
  newtr.appendChild(Valor)
  newtr.appendChild(Botones)
- don.appendChild(newtr)}
+ don.appendChild(newtr)
+ 
+
+}
 }
 
  function eliminar(i){
@@ -64,3 +62,4 @@ Botones.appendChild(elimiar)
  function logevent(event){
    console.log(event)
  }
+   

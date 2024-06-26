@@ -6,7 +6,7 @@ function agregar(){
 var  res = document.getElementById("tar").value
  TListaTarea.push(res)
  var don = document.querySelector("#ContTar")
- don.innerHTML= "";
+ document.getElementById("tar").value=  "" ;
  ListTar();
  }
 
@@ -35,8 +35,6 @@ function ListTar(){
    var don = document.querySelector("#ContTar")
    don.innerHTML=""
  for (let i = 0; i < TListaTarea.length; i++) {
-   
-   
 const elimiar =document.createElement("button");
 const completado =document.createElement("button");
 elimiar.textContent = "Eliminar";
@@ -46,12 +44,16 @@ completado.addEventListener("click", function ()  { completados(i); });
 var newtr = document.createElement("tr")
  var Valor = document.createElement("td");
  var Botones = document.createElement("td");
+ Botones.attributes
  var newContent = document.createTextNode(TListaTarea[i]);
  Valor.appendChild(newContent)
+ Valor.classList.add("Valores_tabla")
 Botones.appendChild(completado)
 Botones.appendChild(elimiar)
+Botones.classList.add("Botones_cont");
  newtr.appendChild(Valor)
  newtr.appendChild(Botones)
+ newtr.classList.add("Valor_Botones")
  don.appendChild(newtr)
  
 

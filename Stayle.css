@@ -13,15 +13,13 @@ body{
     font-size: 40px;
     padding: 0;
 }
-#comple{
-    
-}
+
 table{
     border: 1px solid black;
     border-spacing: 0;
     width: fit-content;
 }
-tr{
+#ContTar tr{
     border-bottom: 1px solid black;  
 }
 td{
@@ -29,4 +27,27 @@ td{
 }
 hr{
     width: 100%;
+}
+.Botones_cont{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    gap: 5px;
+    padding: 5px;
+    
+}
+.Valor_Botones{
+padding: 10px;
+}
+.Valores_tabla{
+padding: 10px;
+}
+#entrada{
+    display: flex;
+    
+}
+#centrados{
+    display: flex;
+    justify-content: center;
+    margin: 0px 10px 10px 10px ;
 }

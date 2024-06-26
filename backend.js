@@ -10,20 +10,25 @@ var  res = document.getElementById("tar").value
  ListTar();
  }
 
-function completados(i) {
-  
-  var do1 = document.querySelector("#Comple")
-  var lol = document.createTextNode(TListaTarea[i]);
-  var newtr1 = document.createElement("tr")
-  var newtd1 = document.createElement("td");
-  var cont1 = document.createTextNode(lol);
-  newtd1.appendChild(lol)
-  newtr1.appendChild(newtd1)
-  do1.appendChild(newtr1)
-
-    TListaTarea.splice(i,1);
+function completados(p) {
+    TlistaCompletadas.push(TListaTarea[p]);
+    TListaTarea.splice(p,1);
     ListTar();
-    
+    ListComple();
+}
+
+function ListComple() {
+  var do1 = document.querySelector("#Comple");
+  do1.innerHTML = "";
+  for (let i = 0; i < TlistaCompletadas.length; i++)
+  {
+      var newtr1 = document.createElement("tr");
+      var newtd1 = document.createElement("td");
+      var cont1 = document.createTextNode(TlistaCompletadas[i]);
+      newtd1.appendChild(cont1);
+      newtr1.appendChild(newtd1);
+      do1.appendChild(newtr1);
+  };
 }
 
 function ListTar(){
@@ -36,8 +41,8 @@ const elimiar =document.createElement("button");
 const completado =document.createElement("button");
 elimiar.textContent = "Eliminar";
 completado.textContent = "Completado";
-elimiar.addEventListener("click", function (i)  { eliminar(i); });
-completado.addEventListener("click", function (i)  { completados(i); });
+elimiar.addEventListener("click", function ()  { eliminar(i); });
+completado.addEventListener("click", function ()  { completados(i); });
 var newtr = document.createElement("tr")
  var Valor = document.createElement("td");
  var Botones = document.createElement("td");
@@ -53,8 +58,8 @@ Botones.appendChild(elimiar)
 }
 }
 
- function eliminar(i){
-   TListaTarea.splice(i, 1);
+ function eliminar(g){
+   TListaTarea.splice(g, 1);
  ListTar();
   
  }
@@ -63,3 +68,69 @@ Botones.appendChild(elimiar)
    console.log(event)
  }
    
+  /*
+ let TListaTarea = [];
+ let TlistaCompletadas = [];
+ 
+ function agregar() {
+     var res = document.getElementById("tar").value;
+     if (res !== "") { // Asegúrate de no agregar tareas vacías
+         TListaTarea.push(res);
+         document.getElementById("tar").value = ""; // Limpiar el input
+         ListTar();
+     }
+ }
+ 
+ function completados(index) {
+     TlistaCompletadas.push(TListaTarea[index]);
+     TListaTarea.splice(index, 1);
+     ListTar();
+     ListComple();
+ }
+ 
+ function eliminarTarea(index) {
+     TListaTarea.splice(index, 1);
+     ListTar();
+ }
+ 
+ function ListTar() {
+     var don = document.querySelector("#ContTar");
+     don.innerHTML = "";
+     TListaTarea.forEach((tarea, i) => {
+         const eliminar = document.createElement("button");
+         const completado = document.createElement("button");
+         eliminar.textContent = "Eliminar";
+         completado.textContent = "Completado";
+         
+         eliminar.addEventListener("click", () => eliminarTarea(i));
+         completado.addEventListener("click", () => completados(i));
+         
+         var newtr = document.createElement("tr");
+         var Valor = document.createElement("td");
+         var Botones = document.createElement("td");
+         var newContent = document.createTextNode(tarea);
+         Valor.appendChild(newContent);
+         Botones.appendChild(completado);
+         Botones.appendChild(eliminar);
+         newtr.appendChild(Valor);
+         newtr.appendChild(Botones);
+         don.appendChild(newtr);
+     });
+ }
+ 
+ function ListComple() {
+     var do1 = document.querySelector("#Comple");
+     do1.innerHTML = "";
+     TlistaCompletadas.forEach(tarea => {
+         var newtr1 = document.createElement("tr");
+         var newtd1 = document.createElement("td");
+         var cont1 = document.createTextNode(tarea);
+         newtd1.appendChild(cont1);
+         newtr1.appendChild(newtd1);
+         do1.appendChild(newtr1);
+     });
+ }
+ 
+ function logevent(event) {
+     console.log(event);
+ }*/

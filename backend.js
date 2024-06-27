@@ -4,18 +4,24 @@ let cont=0;
 
 function agregar(){
 var  res = document.getElementById("tar").value
- TListaTarea.push(res)
+if (res == ""){}else{
+    TListaTarea.push(res)
  var don = document.querySelector("#ContTar")
  document.getElementById("tar").value=  "" ;
  ListTar();
+}
+ 
  }
 
 function completados(p) {
-    TlistaCompletadas.push(TListaTarea[p]);
-    TListaTarea.splice(p,1);
-    ListTar();
-    ListComple();
-}
+
+        TlistaCompletadas.push(TListaTarea[p]);
+        TListaTarea.splice(p,1);
+        ListTar();
+        ListComple(); 
+    }
+    
+
 
 function ListComple() {
   var do1 = document.querySelector("#Comple");

@@ -26,8 +26,10 @@ function ListComple() {
       var newtd1 = document.createElement("td");
       var cont1 = document.createTextNode(TlistaCompletadas[i]);
       newtd1.appendChild(cont1);
+      newtd1.classList.add("Valor_Botones")
       newtr1.appendChild(newtd1);
       do1.appendChild(newtr1);
+
   };
 }
 

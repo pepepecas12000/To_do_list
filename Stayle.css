@@ -4,8 +4,17 @@ header{
     align-items: center;
     background-color: blanchedalmond;
     margin: 0;
-    padding: 0;
+    padding: 6px;
 }
+
+h1{
+    padding: 6px;
+}
+.subtitulo{
+    font-size: 40px;
+    border-bottom: 1px solid black;
+}
+
 body{
     margin: 0;
 }
@@ -20,6 +29,9 @@ table{
     width: fit-content;
 }
 #ContTar tr{
+    border-bottom: 1px solid black;  
+}
+#Comple tr{
     border-bottom: 1px solid black;  
 }
 td{
@@ -38,16 +50,31 @@ hr{
 }
 .Valor_Botones{
 padding: 10px;
+
 }
 .Valores_tabla{
 padding: 10px;
 }
 #entrada{
     display: flex;
-    
+    border: 1px solid black;
+    border-radius: 10px;
 }
 #centrados{
     display: flex;
     justify-content: center;
-    margin: 0px 10px 10px 10px ;
+    margin: 10px;
+}
+#tar{
+border: none;
+margin: 4px 0 4px 4px ;
+}
+#CTar{
+    border: none;
+    border-bottom: 6px solid black;
+    }
+
+#subir{
+    border-radius: 10px;
+    
 }

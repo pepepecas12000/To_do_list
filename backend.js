@@ -43,6 +43,8 @@ elimiar.textContent = "Eliminar";
 completado.textContent = "Completado";
 elimiar.addEventListener("click", function ()  { eliminar(i); });
 completado.addEventListener("click", function ()  { completados(i); });
+completado.style.backgroundColor = "rgba(231, 235, 144, 0.952)";
+elimiar.style.backgroundColor = "rgba(222,107, 72, 0.952)"
 var newtr = document.createElement("tr")
  var Valor = document.createElement("td");
  var Botones = document.createElement("td");
@@ -71,70 +73,3 @@ Botones.classList.add("Botones_cont");
  function logevent(event){
    console.log(event)
  }
-   
-  /*
- let TListaTarea = [];
- let TlistaCompletadas = [];
- 
- function agregar() {
-     var res = document.getElementById("tar").value;
-     if (res !== "") { // Asegúrate de no agregar tareas vacías
-         TListaTarea.push(res);
-         document.getElementById("tar").value = ""; // Limpiar el input
-         ListTar();
-     }
- }
- 
- function completados(index) {
-     TlistaCompletadas.push(TListaTarea[index]);
-     TListaTarea.splice(index, 1);
-     ListTar();
-     ListComple();
- }
- 
- function eliminarTarea(index) {
-     TListaTarea.splice(index, 1);
-     ListTar();
- }
- 
- function ListTar() {
-     var don = document.querySelector("#ContTar");
-     don.innerHTML = "";
-     TListaTarea.forEach((tarea, i) => {
-         const eliminar = document.createElement("button");
-         const completado = document.createElement("button");
-         eliminar.textContent = "Eliminar";
-         completado.textContent = "Completado";
-         
-         eliminar.addEventListener("click", () => eliminarTarea(i));
-         completado.addEventListener("click", () => completados(i));
-         
-         var newtr = document.createElement("tr");
-         var Valor = document.createElement("td");
-         var Botones = document.createElement("td");
-         var newContent = document.createTextNode(tarea);
-         Valor.appendChild(newContent);
-         Botones.appendChild(completado);
-         Botones.appendChild(eliminar);
-         newtr.appendChild(Valor);
-         newtr.appendChild(Botones);
-         don.appendChild(newtr);
-     });
- }
- 
- function ListComple() {
-     var do1 = document.querySelector("#Comple");
-     do1.innerHTML = "";
-     TlistaCompletadas.forEach(tarea => {
-         var newtr1 = document.createElement("tr");
-         var newtd1 = document.createElement("td");
-         var cont1 = document.createTextNode(tarea);
-         newtd1.appendChild(cont1);
-         newtr1.appendChild(newtd1);
-         do1.appendChild(newtr1);
-     });
- }
- 
- function logevent(event) {
-     console.log(event);
- }*/

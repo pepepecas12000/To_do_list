@@ -5,29 +5,48 @@
     <link rel="stylesheet" href="Stayle.css">
     <title>Document</title>
     <script  src="backend.js"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="custom-primary-bg-subtle">
+
 <header>
-    <div><h2 id="hola">Bienvenido a el creador de listas de tareas</h2></div>
+    <div class="header"><h1 >Bienvenido al creador de listas de tareas</h1></div>
+    
 </header>
 
-<input type="text" name="Tareas" id="tar">
-<input type="submit" id="subir" onclick="agregar()" >
 
-<button id="muestra" onclick="mo()" ></button>
+<div class="container" >
+<div class="row" id="centrados">
 
-<table id="ContTar">
+<div class="col-8 p-0 m-2 d-flex flex-column justify-content-center"  >
     
-    </table>
-<table id="Comple">
+    <div class=" d-flex justify-content-end gap-2  " id="entrada">
+<input type="text" name="Tareas" id="tar" class="w-100" placeholder="Ingresa una tarea">
+<input type="submit" id="subir" onclick="agregar()" >
+</div>
+</div>
+</div></div>
+
+<div class="container ">
+    <div class="row-2">
+<div class="col-sm-12 col-md-8 col-lg-6 col-xl-5">
+    <h2 class="subtitulo">Tareas por hacer</h2>
+<table class="table table-striped p-5"  id="ContTar">
 
 </table>
+</div></div></div>
+<div class="container">
+    <div class="row-2">
+        <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5">
+<h2 class="subtitulo" >Tareas completadas</h2>
+<table  class="table  table-striped p-5" id="Comple">
+
+</table>
+</div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 
 </body>
-   
-
-
-   
 </html>
